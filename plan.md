@@ -1,10 +1,10 @@
 ## Steps
 
-- [ ] Decide the game (ex.: avoid obstacles, collect prizes, race game, boardgame)
-- [ ] Plan your project
-- [ ] Define the MVP
-- [ ] Create a folder structure
-- [ ] Create the files
+- [x] Decide the game (ex.: avoid obstacles, collect prizes, race game, boardgame)
+- [x] Plan your project
+- [x] Define the MVP
+- [x] Create a folder structure
+- [x] Create the files
 - [ ] Start coding
 
 
@@ -21,7 +21,7 @@
 
 ## Plan
 
-- [ ] Create the game boarf (full screen)
+- [ ] Create the game board (full screen)
 - [ ] Make a player appear on the screen
 - [ ] Create the logic for the player to move
 - [ ] Make the player move with Arrow Keys

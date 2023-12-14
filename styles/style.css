@@ -8,3 +8,8 @@ html, body{
     min-height: 100vh;
     min-width: 100vw;
 }
+
+#player{
+    background-color: pink;
+    position: absolute;
+}
