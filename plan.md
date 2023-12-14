@@ -5,7 +5,7 @@
 - [x] Define the MVP
 - [x] Create a folder structure
 - [x] Create the files
-- [ ] Start coding
+- [x] Start coding
 
 
 ## Steps for MVP
@@ -21,13 +21,13 @@
 
 ## Plan
 
-- [ ] Create the game board (full screen)
-- [ ] Make a player appear on the screen
-- [ ] Create the logic for the player to move
-- [ ] Make the player move with Arrow Keys
-- [ ] Create obstacle
-- [ ] Move the obstacle
-- [ ] Create multiple obstacles
+- [x] Create the game board (full screen)
+- [x] Make a player appear on the screen
+- [x] Create the logic for the player to move
+- [x] Make the player move with Arrow Keys
+- [x] Create obstacle
+- [x] Move the obstacle
+- [x] Create multiple obstacles
 - [ ] Create the collision objects
 - [ ] (Extra) Limit player moovement on the play screen
 - [ ] (Extra) Make the obstacles appear randomly on screen

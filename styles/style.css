@@ -1,6 +1,7 @@
 html, body{
     margin: 0;
     padding: 0;
+    overflow: hidden;
 }
 
 #board {
@@ -12,4 +13,9 @@ html, body{
 #player{
     background-color: pink;
     position: absolute;
+}
+
+.obstacles {
+    position: absolute;
+    background-color: red;
 }
