@@ -40,10 +40,10 @@ class Game {
   attachEventListeners(){
     window.addEventListener("keydown", (event)=> {
         const input = event.key
-        if(input === "ArrowLeft"){
+        if(input === "ArrowLeft" && this.player.positionX > 0){
             this.player.moveLeft()
         }
-        else if(input === "ArrowRight"){
+        else if(input === "ArrowRight" && this.player.positionX < 100 - this.player.width){
             this.player.moveRight()
         }
     })
@@ -102,7 +102,7 @@ class Obstacle {
     constructor(){
         this.width = 10
         this.height = 5
-        this.positionX = 50 - this.width / 2
+        this.positionX = Math.floor(Math.random() *( 100 - this.width + 1))
         this.positionY = 95
 
         this.domElement = this.createElement()   

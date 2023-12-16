@@ -29,6 +29,6 @@
 - [x] Move the obstacle
 - [x] Create multiple obstacles
 - [x] Create the collision objects
-- [ ] (Extra) Limit player moovement on the play screen
-- [ ] (Extra) Make the obstacles appear randomly on screen
-- [ ] (Extra) Change the obstacles from blocks to images
+- [x] (Extra) Limit player moovement on the play screen
+- [x] (Extra) Make the obstacles appear randomly on screen
+- [x] (Extra) Change the obstacles from blocks to images
