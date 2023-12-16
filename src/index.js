@@ -6,11 +6,36 @@ class Game {
   start() {
     this.player = new Player();
     this.attachEventListeners();
-    const obstacle = new Obstacle()
-    this.obstacles.push(obstacle)
 
+    this.createObstacles()
     this.moveObstacles()
-    // this.createObstacles()
+
+    // setTimeout(()=>{
+    //   clearInterval(this.moveInterval)
+    //   console.log("PLAYER =====>", this.player.domElement.getBoundingClientRect())
+    //   console.log("OBSTACLE =====>", this.obstacles[0].domElement.getBoundingClientRect())
+    // }, 10000)
+  }
+
+  detectCollision(obstacle){
+    const player = this.player.domElement.getBoundingClientRect()
+    const obstacleInstance = obstacle.domElement.getBoundingClientRect()
+
+    if(player.top < obstacleInstance.bottom &&
+      player.left < obstacleInstance.right &&
+      player.right > obstacleInstance.left &&
+      player.bottom > obstacleInstance.top){
+      clearInterval(this.moveInterval)
+      alert("you crashed")
+      window.location.reload()
+    } 
+    else{
+      this.player.domElement.style.backgroundColor = "pink"
+      console.log("else")
+    }
+
+
+
   }
   attachEventListeners(){
     window.addEventListener("keydown", (event)=> {
@@ -24,9 +49,10 @@ class Game {
     })
   }
   moveObstacles(){
-    setInterval(()=>{
+    this.moveInterval = setInterval(()=>{
         this.obstacles.forEach((obstacle)=>{
             obstacle.moveDown()
+            this.detectCollision(obstacle)
         })
     },60)
   }
@@ -34,7 +60,7 @@ class Game {
     setInterval(()=>{
         const obstacle = new Obstacle()
         this.obstacles.push(obstacle)
-    },1000)
+    },2000)
   }
 }
 
@@ -51,8 +77,8 @@ class Player {
   createPlayer() {
     const nodeDOM = document.createElement("div");
     nodeDOM.id = "player";
-    nodeDOM.style.width = `${this.width}vh`;
-    nodeDOM.style.height = `${this.height}vw`;
+    nodeDOM.style.width = `${this.width}vw`;
+    nodeDOM.style.height = `${this.height}vh`;
     nodeDOM.style.bottom = this.positionY + `vh`;
     nodeDOM.style.left = `${this.positionX}vw`;
 
@@ -99,6 +125,8 @@ class Obstacle {
         this.domElement.style.bottom = `${this.positionY}vh`
     }
 }
+
+
 
 const game = new Game();
 game.start();
